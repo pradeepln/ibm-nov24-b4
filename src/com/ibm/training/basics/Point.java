@@ -4,7 +4,7 @@ public class Point {
 	
 	int x,y;
 	
-	Point(int x,int y){
+	public Point(int x,int y){
 		this.x = x;
 		this.y = y;
 	}
@@ -15,5 +15,10 @@ public class Point {
 	public boolean equals(Object o) {
 		Point other = (Point) o; //explicit typecast
 		return (this.x == other.x && this.y == other.y);
+	}
+	
+	@Override
+	public String toString() {
+		return "Point[x="+x+",y="+y+"]";
 	}
 }
