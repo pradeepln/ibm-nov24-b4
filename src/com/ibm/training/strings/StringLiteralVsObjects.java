@@ -22,6 +22,7 @@ public class StringLiteralVsObjects {
 		System.out.println(s2);
 		
 		System.out.println(s4);
+		//System.out.println(s4.hashCode());
 	}
 
 }
