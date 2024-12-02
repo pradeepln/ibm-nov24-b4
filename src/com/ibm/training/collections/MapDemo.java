@@ -1,7 +1,7 @@
 package com.ibm.training.collections;
 
 import java.util.Collection;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -13,7 +13,9 @@ public class MapDemo {
 	}
 
 	private static void mapOps() {
-		Map<String,Integer> runsMap = new HashMap<>();
+		//Map<String,Integer> runsMap = new HashMap<>();
+		Map<String,Integer> runsMap = new LinkedHashMap<>();
+		
 		runsMap.put("rahul", 75);
 		runsMap.put("jaiswal", 160);
 		runsMap.put("virat", 11);
