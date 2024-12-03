@@ -42,7 +42,8 @@ public class LambdaDemo {
 		
 		System.out.println("After: \n" + Arrays.toString(words));
 	}
-	
+//arity           ret                    args
+//s acSp    mod   ret       name         args
 	public static int wordsWithEFirst(String word1,String word2){
 		
 		if(word1.contains("e") && !word2.contains("e")) {
