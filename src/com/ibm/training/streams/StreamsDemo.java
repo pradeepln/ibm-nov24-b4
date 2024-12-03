@@ -42,7 +42,24 @@ public class StreamsDemo {
 			.map(i -> Math.sin(i))
 			.map(d -> "hello "+d)
 			.forEach(System.out::println);
-
+		
+		System.out.println("_______________________________ reduce ops ______________________");
+		
+		//String concatenated = words.stream().filter(s -> s.length() > 0).reduce("ha ha ha", (s1,s2) -> s1.toUpperCase()+s2.toUpperCase());
+		String concatenated = words
+				.stream()
+				.filter(s -> s.length() > 20)
+				.map(s -> s.toUpperCase())
+				.reduce((s1,s2) -> s1+","+s2)
+				.orElse("nothing");
+		System.out.println(concatenated);
+		List<Integer> nums = List.of(10,23,234,42,71);
+		
+		Integer sum = nums.stream().reduce(0, (n1,n2) ->{ 
+			System.out.println("Binary op combining "+n1+" and "+n2);
+			return n1 + n2;
+		});
+		System.out.println(sum);
 	}
 
 }
