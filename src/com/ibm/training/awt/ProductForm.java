@@ -94,6 +94,12 @@ public class ProductForm implements ActionListener{
 			clearTextFields();
 			lblStatus.setText("Saved!");
 		}else if(srcOfEvent == btnCancel) {
+			try {
+				Thread.sleep(10000);
+			} catch (InterruptedException e1) {
+				e1.printStackTrace();
+			}
+			
 			clearTextFields();
 		}
 	}
